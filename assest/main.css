@@ -1,0 +1,250 @@
+.header {
+    height: 120px;
+    background-image: linear-gradient(0, #fe6433, #f53e2d);
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__navbar-list {
+    list-style: none;
+    padding-left: 0;
+    padding-top: 2px;
+}
+
+.header__navbar-item {
+    margin: 0 8px;
+    position: relative;
+}
+
+/* header qr */
+.header__navbar-item--has-qr:hover .header__qr {
+    display: block;
+}
+
+.header__navbar-item--hasnotify:hover .header__notify{
+    display: block;
+}
+
+.header__navbar-item,
+.header__navbar-item-link {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 300;
+
+}
+
+.header__navbar-item:hover,
+.header__navbar-icon:hover,
+.header__navbar-item-link :hover {
+    /* 2 cái 1 lúc là áp dụng cho cái nào có cả 2 class */
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+
+.header__navbar-item--strong {
+    font-weight: 500;
+}
+
+.header__navbar-item--separate::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 1px solid #FB9086;
+    height: 12px;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header__navbar-icon-link {
+    color: var(--white-color);
+    text-decoration: none;
+    /* bỏ gạch chân chữ */
+}
+
+.header__navbar-icon {
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-right: 8px;
+}
+
+.header__navbar-title--noPointer:hover {
+    cursor: text;
+    color: var(--white-color);
+}
+
+/* Code cho QR Code */
+
+.header__qr {
+    background-color: var(--white-color);
+    width: 200px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    padding: 10px;
+    border-radius: 2px;
+    display: none;
+    animation: fadeIn ease-in-out 0.4s;
+    /*chuyển động chậm */
+}
+
+.header__qr-apps {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__qr-img {
+
+    width: 100%;
+}
+
+
+.header__qr-download-img {
+    width: 44%;
+
+}
+
+.header__notify {
+    position: absolute;
+    top: 135%;
+    right: 0;
+    width: 400px;
+    background-color: var(--white-color);
+    border: 1px solid #d3d3d3;
+    cursor: default;
+    user-select: none;
+    -webkit-user-select: none;
+    transform-origin: 90% top;
+    animation: headerNotifyGrowth ease-in 0.5s;
+    display: none;
+}
+
+.header__notify::before {
+    content: "";
+    border: 20px solid;
+    border-color: transparent transparent var(--white-color);
+    position: absolute;
+    right: 12px;
+    top: -30px;
+}
+
+.header__notify::after { /* để khi trượt từ thông báo xuống OK */
+    content: "";
+    width: 150px;
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: -10px;
+    height: 25px;
+}
+.header__notify-header {
+    height: 40px;
+    background-color: var(--white-color);
+}
+
+.header__notify-header h3 {
+    color: #666;
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 40px;
+}
+
+
+.header__notify-list {
+    padding-left: 0;
+}
+
+.header__notify-item {
+    display: flex;
+    background-color: var(--primary-color-rgba);
+}
+
+.header__notify-item:hover {
+    background-color: gray;
+}
+
+.header__notify-item--viewed {
+    background-color: var(--white-color);
+}
+
+.header__notify-link {
+    display: flex;
+    padding: 12px;
+    text-decoration: none; /*bỏ gạch chân link */
+    /* background-color: var(--primary-color); */
+width: 100%;
+}
+
+.header__notify-img {
+    width: 48px;
+    object-fit: contain;
+    padding: 12px;
+}
+
+.header__notify-info {
+    margin-left: 12px;
+}
+
+.header__notify-name {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--black-color);
+    font-weight: 400;
+}
+
+.header__notify-desc {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    color: #756F6E;
+}
+
+.header__notify-footer{
+    display: flex;
+
+}
+
+.header__notify-footer-btn{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 8px 0;
+}
+
+/* Modal */
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+display: flex;
+}
+
+.modal__overlay{
+    position: absolute; /* thì cái overlay vị trí sẽ theo mother nó (ở đây là class modal */
+    width: 100%; /* 100% cua mother no */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+
+}
+
+.modal__body{
+    background-color: var(--white-color);
+    margin: auto;
+    position: relative;
+    border-radius: 5px;
+}
+
+.modal__inner{
+display: flex;
+}
+
