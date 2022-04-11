@@ -24,7 +24,7 @@
     display: block;
 }
 
-.header__navbar-item--hasnotify:hover .header__notify{
+.header__navbar-item--hasnotify:hover .header__notify {
     display: block;
 }
 
@@ -133,7 +133,8 @@
     top: -30px;
 }
 
-.header__notify::after { /* để khi trượt từ thông báo xuống OK */
+.header__notify::after {
+    /* để khi trượt từ thông báo xuống OK */
     content: "";
     width: 150px;
     display: block;
@@ -142,6 +143,7 @@
     top: -10px;
     height: 25px;
 }
+
 .header__notify-header {
     height: 40px;
     background-color: var(--white-color);
@@ -176,9 +178,10 @@
 .header__notify-link {
     display: flex;
     padding: 12px;
-    text-decoration: none; /*bỏ gạch chân link */
+    text-decoration: none;
+    /*bỏ gạch chân link */
     /* background-color: var(--primary-color); */
-width: 100%;
+    width: 100%;
 }
 
 .header__notify-img {
@@ -204,12 +207,12 @@ width: 100%;
     color: #756F6E;
 }
 
-.header__notify-footer{
+.header__notify-footer {
     display: flex;
 
 }
 
-.header__notify-footer-btn{
+.header__notify-footer-btn {
     text-decoration: none;
     font-size: 1.5rem;
     color: var(--text-color);
@@ -220,31 +223,146 @@ width: 100%;
 }
 
 /* Modal */
-.modal{
+.modal {
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-display: flex;
+    display: flex;
 }
 
-.modal__overlay{
-    position: absolute; /* thì cái overlay vị trí sẽ theo mother nó (ở đây là class modal */
-    width: 100%; /* 100% cua mother no */
+.modal__overlay {
+    position: absolute;
+    /* thì cái overlay vị trí sẽ theo mother nó (ở đây là class modal */
+    width: 100%;
+    /* 100% cua mother no */
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
 
 }
 
-.modal__body{
+.modal__body {
     background-color: var(--white-color);
     margin: auto;
     position: relative;
     border-radius: 5px;
 }
 
-.modal__inner{
-display: flex;
+.modal__inner {
+    display: flex;
+}
+
+/* Authen Modal */
+.auth-form{
+    width: 500px;
+}
+
+.auth-form__container {
+    padding: 0 32px;
+}
+
+.auth-form__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.auth-form__heading {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.auth-form__switch-btn {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.auth-form__form{
+    
+    
+}
+
+.auth-form__input{
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    padding: 0 12px;
+    font-size: 1.4rem;
+    border-radius: 2px;
+    border: 1px solid ;
+}
+
+.auth-form__input:focus {
+    border-color:  red;
+}
+
+
+.auth-form_aside{
+}
+.auth-form_policy{
+    margin-top: 20px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: center;
+}
+
+.auth-form__text-link{
+    text-decoration: none;
+    cursor: pointer;
+    padding: 12px;
+}
+
+.auth-form__controls{
+    margin-top: 80px;
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.btn{
+    min-width: 142px;
+    height: 40px;
+    border-radius: 3px;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover{
+    background-color: lightgray ;
+}
+
+.btn.btn--primary{
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+.btn.btn--size-s{
+    height: 32px;   
+    font-size: 12px;
+}
+.btn.btn--disabled {
+    cursor: default;
+    color: #ccc;
+    background-color: #d3d3d3;
+}
+
+.auth-form__controls-back{
+    margin-right: 28px;
+}
+
+.auth-form__socials{
+    background-color: #f5f5f5;
+    padding: 16px 28px;
+    display: flex;
+    justify-content: space-between;
 }
 
